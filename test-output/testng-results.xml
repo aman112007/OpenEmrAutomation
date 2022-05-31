@@ -1,33 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-31T11:38:01 IST" name="Default suite" finished-at="2022-05-31T11:38:33 IST" duration-ms="32501">
+  <suite started-at="2022-05-31T12:59:02 IST" name="Default suite" finished-at="2022-05-31T12:59:49 IST" duration-ms="47379">
     <groups>
     </groups>
-    <test started-at="2022-05-31T11:38:01 IST" name="Default test" finished-at="2022-05-31T11:38:33 IST" duration-ms="32501">
+    <test started-at="2022-05-31T12:59:02 IST" name="Default test" finished-at="2022-05-31T12:59:49 IST" duration-ms="47379">
       <class name="com.brillio.test.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.brillio.test.LoginTest@bae7dc0]" started-at="2022-05-31T11:38:01 IST" name="setup" finished-at="2022-05-31T11:38:12 IST" duration-ms="11045" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.brillio.test.LoginTest@2805d709]" started-at="2022-05-31T12:59:02 IST" name="setup" finished-at="2022-05-31T12:59:13 IST" duration-ms="10473" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidCredentialTest()[pri:0, instance:com.brillio.test.LoginTest@bae7dc0]" started-at="2022-05-31T11:38:12 IST" name="invalidCredentialTest" finished-at="2022-05-31T11:38:14 IST" duration-ms="2454" status="PASS">
+        <test-method signature="invalidCredentialTest()[pri:0, instance:com.brillio.test.LoginTest@2805d709]" started-at="2022-05-31T12:59:13 IST" name="invalidCredentialTest" finished-at="2022-05-31T12:59:15 IST" duration-ms="2326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidCredentialTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.brillio.test.LoginTest@bae7dc0]" started-at="2022-05-31T11:38:14 IST" name="teardown" finished-at="2022-05-31T11:38:15 IST" duration-ms="965" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.brillio.test.LoginTest@2805d709]" started-at="2022-05-31T12:59:15 IST" name="teardown" finished-at="2022-05-31T12:59:16 IST" duration-ms="937" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.brillio.test.LoginTest@bae7dc0]" started-at="2022-05-31T11:38:15 IST" name="setup" finished-at="2022-05-31T11:38:24 IST" duration-ms="9208" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.brillio.test.LoginTest@2805d709]" started-at="2022-05-31T12:59:16 IST" name="setup" finished-at="2022-05-31T12:59:27 IST" duration-ms="11315" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validCredentialTest()[pri:0, instance:com.brillio.test.LoginTest@bae7dc0]" started-at="2022-05-31T11:38:24 IST" name="validCredentialTest" finished-at="2022-05-31T11:38:32 IST" duration-ms="7714" status="PASS">
+        <test-method signature="validCredentialTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.brillio.test.LoginTest@2805d709]" started-at="2022-05-31T12:59:27 IST" name="validCredentialTest" data-provider="validCredentialData" finished-at="2022-05-31T12:59:34 IST" duration-ms="6777" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pass]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[English (Indian)]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[OpenEMR]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validCredentialTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.brillio.test.LoginTest@bae7dc0]" started-at="2022-05-31T11:38:32 IST" name="teardown" finished-at="2022-05-31T11:38:33 IST" duration-ms="1064" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.brillio.test.LoginTest@2805d709]" started-at="2022-05-31T12:59:34 IST" name="teardown" finished-at="2022-05-31T12:59:35 IST" duration-ms="933" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.brillio.test.LoginTest@2805d709]" started-at="2022-05-31T12:59:35 IST" name="setup" finished-at="2022-05-31T12:59:42 IST" duration-ms="7243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validCredentialTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.brillio.test.LoginTest@2805d709]" started-at="2022-05-31T12:59:42 IST" name="validCredentialTest" data-provider="validCredentialData" finished-at="2022-05-31T12:59:48 IST" duration-ms="6318" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[physician]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[physician]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Dutch]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[OpenEMR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validCredentialTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.brillio.test.LoginTest@2805d709]" started-at="2022-05-31T12:59:48 IST" name="teardown" finished-at="2022-05-31T12:59:49 IST" duration-ms="1006" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
