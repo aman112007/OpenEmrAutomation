@@ -1,41 +1,15 @@
 package com.brillio.test;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.brillio.base.WebDriverWrapper;
 
-public class LoginTest {
-	
-	WebDriver driver;
-	
-	@BeforeMethod
-	public void setup() 
-	{
-		WebDriverManager.chromedriver().setup();
+public class LoginTest extends WebDriverWrapper {
 
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
-		driver.get("https://demo.openemr.io/b/openemr");
-	}
-	
-	@AfterMethod
-	public void teardown()
-	{
-		driver.quit();
-	}
 	@Test
 	public void validCredentialTest() {
-		
 
 		driver.findElement(By.id("authUser")).sendKeys("admin");
 		driver.findElement(By.id("clearPass")).sendKeys("pass");
@@ -47,19 +21,17 @@ public class LoginTest {
 		Assert.assertEquals(actualTitle, "OpenEMR");
 
 	}
+
 	@Test
 	public void invalidCredentialTest() {
-		
 
 		driver.findElement(By.id("authUser")).sendKeys("john");
 		driver.findElement(By.id("clearPass")).sendKeys("jon123");
 		driver.findElement(By.id("login-button")).click();
-		
+
 		String actualError = driver.findElement(By.xpath("//div[contains(text(),'Invalid')]")).getText();
-		
+
 		Assert.assertEquals(actualError, "Invalid username or password");
-		
-		
 
 	}
 }

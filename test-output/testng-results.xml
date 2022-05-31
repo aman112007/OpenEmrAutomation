@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-31T10:52:51 IST" name="Default suite" finished-at="2022-05-31T10:53:32 IST" duration-ms="40984">
+  <suite started-at="2022-05-31T11:38:01 IST" name="Default suite" finished-at="2022-05-31T11:38:33 IST" duration-ms="32501">
     <groups>
     </groups>
-    <test started-at="2022-05-31T10:52:51 IST" name="Default test" finished-at="2022-05-31T10:53:32 IST" duration-ms="40984">
+    <test started-at="2022-05-31T11:38:01 IST" name="Default test" finished-at="2022-05-31T11:38:33 IST" duration-ms="32501">
       <class name="com.brillio.test.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.brillio.test.LoginTest@4f2b503c]" started-at="2022-05-31T10:52:51 IST" name="setup" finished-at="2022-05-31T10:53:08 IST" duration-ms="16206" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.brillio.test.LoginTest@bae7dc0]" started-at="2022-05-31T11:38:01 IST" name="setup" finished-at="2022-05-31T11:38:12 IST" duration-ms="11045" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidCredentialTest()[pri:0, instance:com.brillio.test.LoginTest@4f2b503c]" started-at="2022-05-31T10:53:08 IST" name="invalidCredentialTest" finished-at="2022-05-31T10:53:10 IST" duration-ms="2852" status="PASS">
+        <test-method signature="invalidCredentialTest()[pri:0, instance:com.brillio.test.LoginTest@bae7dc0]" started-at="2022-05-31T11:38:12 IST" name="invalidCredentialTest" finished-at="2022-05-31T11:38:14 IST" duration-ms="2454" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidCredentialTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.brillio.test.LoginTest@4f2b503c]" started-at="2022-05-31T10:53:11 IST" name="teardown" finished-at="2022-05-31T10:53:12 IST" duration-ms="1653" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.brillio.test.LoginTest@bae7dc0]" started-at="2022-05-31T11:38:14 IST" name="teardown" finished-at="2022-05-31T11:38:15 IST" duration-ms="965" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.brillio.test.LoginTest@4f2b503c]" started-at="2022-05-31T10:53:12 IST" name="setup" finished-at="2022-05-31T10:53:23 IST" duration-ms="11204" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.brillio.test.LoginTest@bae7dc0]" started-at="2022-05-31T11:38:15 IST" name="setup" finished-at="2022-05-31T11:38:24 IST" duration-ms="9208" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validCredentialTest()[pri:0, instance:com.brillio.test.LoginTest@4f2b503c]" started-at="2022-05-31T10:53:23 IST" name="validCredentialTest" finished-at="2022-05-31T10:53:31 IST" duration-ms="7734" status="PASS">
+        <test-method signature="validCredentialTest()[pri:0, instance:com.brillio.test.LoginTest@bae7dc0]" started-at="2022-05-31T11:38:24 IST" name="validCredentialTest" finished-at="2022-05-31T11:38:32 IST" duration-ms="7714" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validCredentialTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.brillio.test.LoginTest@4f2b503c]" started-at="2022-05-31T10:53:31 IST" name="teardown" finished-at="2022-05-31T10:53:32 IST" duration-ms="1248" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.brillio.test.LoginTest@bae7dc0]" started-at="2022-05-31T11:38:32 IST" name="teardown" finished-at="2022-05-31T11:38:33 IST" duration-ms="1064" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
