@@ -1,9 +1,11 @@
 package com.brillio.utilities;
 
+import java.io.IOException;
+
 import org.testng.annotations.DataProvider;
 
 public class DataUtils {
-	
+
 	@DataProvider
 	public String[][] validCredentialData() {
 		String[][] main = new String[2][4];
@@ -22,21 +24,9 @@ public class DataUtils {
 	}
 
 	@DataProvider
-	public String[][] invalidCredentialData() {
-		String[][] main = new String[3][4];
+	public Object[][] invalidCredentialData() throws IOException {
 
-		main[0][0] = "john";
-		main[0][1] = "john123";
-		main[0][2] = "English (Indian)";
-		main[0][3] = "Invalid username or password";
-		main[1][0] = "peter";
-		main[1][1] = "peter123";
-		main[1][2] = "Dutch";
-		main[1][3] = "Invalid username or password";
-		main[2][0] = "mark";
-		main[2][1] = "mark123";
-		main[2][2] = "Dutch";
-		main[2][3] = "Invalid username or password";
+		Object[][] main = ExcelUtils.getSheetIntoTwoDimArray("test-data/orange_data.xlsx", "invalidCredentialTest");
 
 		return main;
 
