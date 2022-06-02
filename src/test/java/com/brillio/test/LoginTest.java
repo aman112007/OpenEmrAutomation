@@ -12,7 +12,7 @@ public class LoginTest extends WebDriverWrapper {
 
 	
 
-	@Test(dataProviderClass = DataUtils.class,dataProvider = "validCredentialData")
+	@Test(dataProviderClass = DataUtils.class,dataProvider = "commonDataProvider")
 	public void validCredentialTest(String username, String password, String language, String expectedTitle) {
 
 		driver.findElement(By.id("authUser")).sendKeys(username);
@@ -28,7 +28,7 @@ public class LoginTest extends WebDriverWrapper {
 
 	}
 
-	@Test(dataProviderClass = DataUtils.class,dataProvider = "invalidCredentialData")
+	@Test(dataProviderClass = DataUtils.class,dataProvider = "commonDataProvider")
 	public void invalidCredentialTest(String username, String password, String language, String expectedError) {
 
 		driver.findElement(By.id("authUser")).sendKeys(username);
