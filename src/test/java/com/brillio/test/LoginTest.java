@@ -1,47 +1,56 @@
 package com.brillio.test;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.brillio.base.WebDriverWrapper;
+import com.brillio.pages.LoginPage;
+import com.brillio.pages.MainPage;
 import com.brillio.utilities.DataUtils;
 
 public class LoginTest extends WebDriverWrapper {
 
-	
-
-	@Test(dataProviderClass = DataUtils.class,dataProvider = "commonDataProvider")
+	@Test(dataProviderClass = DataUtils.class, dataProvider = "commonDataProvider")
 	public void validCredentialTest(String username, String password, String language, String expectedTitle) {
 
-		driver.findElement(By.id("authUser")).sendKeys(username);
-		driver.findElement(By.id("clearPass")).sendKeys(password);
+		LoginPage.enterUsername(driver, username);
+		test.log(Status.INFO, "Enter Username as " + username);
 
-		Select selectLan = new Select(driver.findElement(By.xpath("//select[@name='languageChoice']")));
-		selectLan.selectByVisibleText(language);
+		LoginPage.enterPassword(driver, password);
+		test.log(Status.INFO, "Enter Password as " + password);
 
-		driver.findElement(By.id("login-button")).click();
+		LoginPage.selectLanguageByText(driver, language);
+		test.log(Status.INFO, "Selected Lanaguage as " + language);
 
-		String actualTitle = driver.getTitle();
+		LoginPage.clickOnLogin(driver);
+		test.log(Status.INFO, "Clicked on login ");
+
+		MainPage.waitForPresenceOfPatientMenu(driver);
+
+		String actualTitle = MainPage.getMainPageTitle(driver);
+		test.log(Status.INFO, "Title is " + actualTitle);
+
 		Assert.assertEquals(actualTitle, expectedTitle);
 
 	}
 
-	@Test(dataProviderClass = DataUtils.class,dataProvider = "commonDataProvider")
+	@Test(dataProviderClass = DataUtils.class, dataProvider = "commonDataProvider")
 	public void invalidCredentialTest(String username, String password, String language, String expectedError) {
 
-		driver.findElement(By.id("authUser")).sendKeys(username);
-		driver.findElement(By.id("clearPass")).sendKeys(password);
-		
-		Select selectLan = new Select(driver.findElement(By.xpath("//select[@name='languageChoice']")));
-		selectLan.selectByVisibleText("Dutch");
-		
-		driver.findElement(By.id("login-button")).click();
+		LoginPage.enterUsername(driver, username);
+		LoginPage.enterPassword(driver, password);
+		LoginPage.selectLanguageByText(driver, language);
+		LoginPage.clickOnLogin(driver);
 
-		String actualError = driver.findElement(By.xpath("//div[contains(text(),'Invalid')]")).getText();
-
-		Assert.assertEquals(actualError, "Invalid username or password");
+		String actualError = LoginPage.getInvalidErrorMessage(driver);
+		Assert.assertEquals(actualError, expectedError);
 
 	}
 }
